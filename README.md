@@ -1,2 +1,4 @@
-# Grupo-5-Projeto
-Repositório para organização da criação da vitrine online.
+# Vitrine digital XP GEEK
+Repositório dos artefatos relacionados ao desenvolvimento do site para a empresa XP GEEK.
+
+Duna soluções, 2025.
