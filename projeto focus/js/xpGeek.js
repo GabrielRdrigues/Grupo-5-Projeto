@@ -3,11 +3,24 @@ document.addEventListener("DOMContentLoaded", function ()
     const botoes = document.querySelectorAll("#botoes button"); // Pega todos os botoes (filtros da tela)
     const elementos = document.querySelectorAll(".elemento"); // Pega todos os elementos (produtos)
 
+    //Adiciona a classe ativo ao INICIO quando inicia.
+    botoes[0].classList.add("ativo");
+
     botoes.forEach(function (botao) 
     {
         botao.addEventListener("click", function () 
         {
             const filtro = botao.textContent;
+            
+            //Inicio Estilizacao
+
+            //Remove o ativo de todos os botoes
+            botoes.forEach(btn => btn.classList.remove("ativo"));
+
+            //Adiciona a classe ativo somente para o elemento clicado
+            botao.classList.add("ativo");
+
+            //Fim estilizacao
 
             elementos.forEach(function (elemento) 
             {
