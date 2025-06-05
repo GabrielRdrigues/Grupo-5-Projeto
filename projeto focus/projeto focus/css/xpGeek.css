@@ -1,0 +1,217 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto";
+    box-sizing: border-box;
+}
+body{
+    background-color: #F5F7FA;
+}
+header{
+    width: 100%;
+    height: 9rem;
+    display: flex;
+    flex-direction: column;
+}
+#headerAcima{
+    width: 100%;
+    height: 50%;
+    border: 1px solid #2E2E38;
+    background-color: #2E2E38;
+    align-items: center;
+    display: flex;
+}
+#headerAbaixo{
+    width: 100%;
+    height: 50%;
+    border: 1px solid #2e2e38b0;
+    background-color: #2e2e38b0;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+#botoes{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-left: 30px;
+}
+#botoes button{
+    color: rgb(240, 240, 240);
+    position: relative;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    background: none;
+    cursor: pointer;
+}
+#botoes button:hover{
+    color: white;
+}
+#botoes button::after{
+    content: "";
+    width: 0%;
+    left: 0;
+    bottom: -4px;
+    border-radius: 30px;
+    height: 3px;
+    background: rgb(255, 255, 255);
+    position: absolute;
+    transition: all 0.2s;
+    }
+#botoes button:hover:after{
+    width: 100%;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #4D2F9F;
+    margin-top: 4.5rem;
+}
+#teste{
+    margin-left: auto;
+    font-family: "Jersey 10";
+    margin-right: auto;
+    margin-top: 2rem;
+    font-size: 12rem;
+    margin-bottom: 3rem;
+}
+.auto-type{
+    font-family: "Jersey 10";
+}
+#containerDeElementos{          /* CONTAINER DE PRODUTOS */
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.elementoContido{
+    background-color: rgb(233, 231, 231);
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+.elemento{                  /* PRODUTOS */
+    display: flex;
+    border-radius: 10px;
+    flex-direction: column;
+    background-color: rgb(233, 231, 231);
+    width: 350px;
+    box-shadow: 0px 0px 30px black;
+    transition: all 0.25s;
+    text-decoration: none;
+}
+
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.elemento:hover:after, .elemento:hover:before{      /* EFEITO DE LUZ */ 
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), transparent 50%, #981aff);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 5px;
+    border-radius: 10px;
+    animation: 2s spin linear infinite;
+    filter: blur(8px);
+}
+@keyframes spin{        /* ANIMAÇÃO DE GIRO */
+    from{
+        --angle: 0deg;
+    }
+    to{
+        --angle: 360deg;
+    }
+}
+.elemento img{ 
+    width: 100%;
+    height: 250px;
+    border-radius: 10px 10px 0px 0px;
+    margin-left: auto;
+    margin-right: auto;
+    object-fit:fill;
+}
+.elemento h2{
+    margin-right: auto;
+    font-size: 1.6rem;
+    font-family: "Exo 2";
+    margin: 10px;
+    color: black;
+}
+.elemento p{
+    font-family: "Exo 2";
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 5px 10px 50px 10px;
+    color: black;
+}
+.elemento:hover{
+    transform: translateY(-10px);
+}
+footer{
+    width: 100%;
+    height: 180px;
+    background-color: #2E2E38;
+}
+footer{
+    width: 100%;
+    height: 11.25rem;
+    background-color: #2E2E38;
+    padding: 1.25rem 2.5rem 1.25rem;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+footer h2{
+    color: #F5F7FA ;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+footer p{
+    color: #F5F7FA ;
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+.sobre{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 2.5rem 0 0;
+}
+
+.contatos{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 2.5rem 0 0;
+}
+
+.formasPagamento{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
