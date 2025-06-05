@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="icon" type="image/png" href="imagens/XPGEEK.png" >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital@0;1&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Nunito:ital@0;1&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>XP Geek</title>
+</head>
+<body data-page="viewprodutos"> <!-- data-page sera utilizado para identificar qual pagina esta-->
+    <header>  <!-- HEADER -->
+        <div id="headerAcima">
+            <img src="imagens/XPGEEKsemFundo.png" alt="" style="height: 3.5rem; margin-left: 40px;">
+        </div>
+        <div id="headerAbaixo">
+            <div id="botoes">
+                <button>Inicio</button>
+                <button>Quadrinhos</button>
+                <button>Action Figures</button>
+                <button>Posters</button>
+                <button>Filmes</button>
+            </div>
+        </div>
+    </header>
+
+    <main> <!-- MAIN -->
+        <div class="containerProduto">
+            <div class="containerCima">
+                <div class="containerImagens">
+                    <div class="containerImagensSecundarias">
+                        <img src="imagens/gamex.jpeg" alt="Produto Image" class="produtoImagemSecundaria">
+                        <img src="imagens/gamex.jpeg" alt="Produto Image" class="produtoImagemSecundaria">
+                        <img src="imagens/gamex.jpeg" alt="Produto Image" class="produtoImagemSecundaria">
+                    </div>
+                    <img src="imagens/gamex.jpeg" alt="Produto Image" id="produtoImagem">
+                </div>
+                <div class="containerInfos">
+                    <h1 id="nomeProduto">Nome Produto</h1>
+                    <h3 id="preco">R$25,00</h3>
+                    <p id="frete">Frete: R$15,00</p>
+                    <button id="comprar">Comprar Agora</button>
+                </div>
+            </div>
+            <div class="containerDescription"> 
+                <h2>Description</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, accusantium? At dolores quo debitis dignissimos recusandae excepturi inventore doloribus architecto. Nisi, at accusantium ullam nemo hic sequi doloremque possimus eaque.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus, qui? Cumque laborum odit at sit consequatur reprehenderit, veritatis quidem, recusandae mollitia, nulla vero ex saepe sed quaerat aut voluptate et!</p>
+            </div>
+        </div>
+        
+
+    </main>
+
+    <footer> <!-- FOOTER -->
+        <div class="sobre">
+            <h2>Sobre Nós</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia debitis, praesentium ad ipsa dolorem eos voluptates quaerat animi obcaecati fugit laboriosam rerum a enim! Placeat ab error quia officiis soluta!</p>
+        </div>
+        <div class="contatos">
+            <h2>Contatos</h2>
+            <p>Instagram</p>
+            <p>Email</p>
+            <p>Twitter</p>
+        </div>
+        <div class="FormasPagamento">
+            <h2>Formas de Pagamento</h2>
+            <p>Cartão de Crédito</p>
+            <p>Pix</p>
+            <p>Boleto Bancário</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="js/xpGeek.js"></script>  <!-- linkagem com o arquivo .js -->
+</body>
+</html>
