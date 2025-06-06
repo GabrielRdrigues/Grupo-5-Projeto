@@ -62,11 +62,6 @@ header{
 #botoes button:hover:after{
     width: 100%;
 }
-
-#botoes button.ativo::after{
-    width: 100%;
-}
-
 main{
     display: flex;
     flex-direction: column;
@@ -79,13 +74,13 @@ main{
     font-family: "Jersey 10";
     margin-right: auto;
     margin-top: 2rem;
-    font-size: 9rem;
+    font-size: 12rem;
     margin-bottom: 3rem;
 }
 .auto-type{
     font-family: "Jersey 10";
 }
-#containerDeElementos{
+#containerDeElementos{          /* CONTAINER DE PRODUTOS */
     height: 100%;
     display: flex;
     flex-direction: row;
@@ -97,7 +92,13 @@ main{
     justify-content: center;
     align-items: center;
 }
-.elemento{ 
+.elementoContido{
+    background-color: rgb(233, 231, 231);
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+.elemento{                  /* PRODUTOS */
     display: flex;
     border-radius: 10px;
     flex-direction: column;
@@ -107,13 +108,43 @@ main{
     transition: all 0.25s;
     text-decoration: none;
 }
+
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.elemento:hover:after, .elemento:hover:before{      /* EFEITO DE LUZ */ 
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), transparent 50%, #981aff);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 5px;
+    border-radius: 10px;
+    animation: 2s spin linear infinite;
+    filter: blur(8px);
+}
+@keyframes spin{        /* ANIMAÇÃO DE GIRO */
+    from{
+        --angle: 0deg;
+    }
+    to{
+        --angle: 360deg;
+    }
+}
 .elemento img{ 
     width: 100%;
     height: 250px;
     border-radius: 10px 10px 0px 0px;
     margin-left: auto;
     margin-right: auto;
-    object-fit: cover;
+    object-fit:fill;
 }
 .elemento h2{
     margin-right: auto;
@@ -156,7 +187,7 @@ footer h2{
 footer p{
     color: #F5F7FA ;
     font-size: 0.8rem;
-    font-weight: 400;
+    font-weight: 500;
     margin-bottom: 0.5rem;
 }
 .sobre{
