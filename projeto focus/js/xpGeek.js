@@ -38,8 +38,8 @@ document.addEventListener("DOMContentLoaded", function ()
 });
 
 var typed = new Typed(".auto-type", {
-    strings: ["XP GEEK TEM GAMES", "XP GEEK TEM POSTERS", "XP GEEK TEM FILMES", "XP GEEK TEM CULTURA"],
-    typeSpeed: 80,
-    backSpeed: 80,
+    strings: ["XP GEEK TEM CANECAS", "XP GEEK TEM ACTION FIGURES", "XP GEEK TEM POSTERS", "XP GEEK TEM CULTURA"],
+    typeSpeed: 100,
+    backSpeed: 100,
     loop: true
 })
