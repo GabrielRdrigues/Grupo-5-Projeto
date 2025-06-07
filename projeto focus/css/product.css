@@ -139,7 +139,7 @@ main{
     color: #2E2E38;
     margin-bottom: 0.5rem;
 }
-#comprar{
+#comprarLink{
     width: 70%;
     height: 3.5rem;
     background-color: #4D2F9F;
@@ -150,6 +150,8 @@ main{
     cursor: pointer;
     border-radius: 5px;
     margin-top: 3rem;
+    text-align: center;
+    line-height: 3.5rem;
 }
 
 .containerDescription{
