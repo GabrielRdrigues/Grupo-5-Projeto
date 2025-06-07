@@ -62,6 +62,9 @@ header{
 #botoes button:hover:after{
     width: 100%;
 }
+#botoes button.ativo::after{
+    width: 100%;
+}
 main{
     display: flex;
     flex-direction: column;
