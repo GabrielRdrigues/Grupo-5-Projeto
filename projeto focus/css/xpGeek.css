@@ -111,7 +111,6 @@ main{
     transition: all 0.25s;
     text-decoration: none;
 }
-
 @property --angle{
     syntax: "<angle>";
     initial-value: 0deg;
