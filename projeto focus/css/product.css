@@ -213,3 +213,106 @@ footer p{
     flex-direction: column;
     align-items: flex-start;
 }
+
+/* Responsividade para max-width: 1024px  tablets*/
+@media (max-width: 1024px) {
+    .containerCima {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .containerImagens,
+    .containerInfos {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    #produtoImagem {
+        width: 80%;
+    }
+
+    .produtoImagemSecundaria {
+        width: 60px;
+        height: auto;
+    }
+
+    #comprarLink {
+        width: 80%;
+        margin-top: 0;
+        margin-bottom: 2rem;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        text-align: center;
+    }
+
+    .sobre, .contatos, .formasPagamento {
+        width: 100%;
+        margin: 1rem 0;
+        align-items: center;
+    }
+}
+
+/* Responsividade para max-width: 768px celulares grandes*/
+@media (max-width: 768px) {
+    #produtoImagem {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .produtoImagemSecundaria {
+        width: 50px;
+    }
+
+    #comprarLink {
+        width: 90%;
+    }
+
+    .containerInfos {
+        padding: 0.5rem;
+    }
+}
+
+/* Responsividade para max-width: 480px celulares pequenos*/
+@media (max-width: 480px) {
+    #botoes {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-left: 1.875rem;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    .produtoImagemSecundaria {
+        width: 40px;
+    }
+
+    #comprarLink {
+        font-size: 1rem;
+        height: 3rem;
+        line-height: 3rem;
+    }
+
+    #nomeProduto {
+        font-size: 1.5rem;
+    }
+
+    #preco {
+        font-size: 1.2rem;
+    }
+
+    #frete {
+        font-size: 1rem;
+    }
+
+    .containerDescription {
+        padding: 0 1rem;
+    }
+}
