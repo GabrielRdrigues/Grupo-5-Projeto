@@ -33,7 +33,7 @@ header{
 #botoes{
     display: flex;
     flex-direction: row;
-    gap: 30px;
+    gap: 1.875rem;
     margin-left: 30px;
 }
 #botoes button{
@@ -111,7 +111,6 @@ main{
     transition: all 0.25s;
     text-decoration: none;
 }
-
 @property --angle{
     syntax: "<angle>";
     initial-value: 0deg;
@@ -217,4 +216,60 @@ footer p{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+}
+
+
+
+/* Responsividade para max-width: 1024px  tablets*/
+@media (max-width: 1024px) {
+    #teste {
+        font-size: 6rem;
+        text-align: center;
+    }
+
+    .elemento {
+        width: 45%;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        text-align: center;
+    }
+
+    .sobre, .contatos, .formasPagamento {
+        width: 100%;
+        margin: 1rem 0;
+        align-items: center;
+    }
+}
+
+/* Responsividade para max-width: 768px celulares grandes*/
+@media (max-width: 768px) {
+    .elemento {
+        width: 90%;
+    }
+
+    #teste {
+        font-size: 4rem;
+    }
+}
+
+/* Responsividade para max-width: 480px celulares pequenos*/
+@media (max-width: 480px) {
+    #teste {
+        font-size: 3rem;
+    }
+
+    .elemento {
+        width: 95%;
+    }
+
+    #botoes {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-left: 1.875rem;
+    }
 }
