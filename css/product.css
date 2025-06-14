@@ -1,0 +1,318 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto";
+    box-sizing: border-box;
+}
+header{
+    width: 100%;
+    height: 9rem;
+    display: flex;
+    flex-direction: column;
+}
+#headerAcima{
+    width: 100%;
+    height: 50%;
+    border: 1px solid #2E2E38;
+    background-color: #2E2E38;
+    align-items: center;
+    display: flex;
+}
+#headerAbaixo{
+    width: 100%;
+    height: 50%;
+    border: 1px solid #2e2e38b0;
+    background-color: #2e2e38b0;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+#botoes{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-left: 30px;
+}
+#botoes button{
+    color: rgb(240, 240, 240);
+    position: relative;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    background: none;
+    cursor: pointer;
+}
+#botoes button:hover{
+    color: white;
+}
+#botoes button::after{
+    content: "";
+    width: 0%;
+    left: 0;
+    bottom: -4px;
+    border-radius: 30px;
+    height: 3px;
+    background: rgb(255, 255, 255);
+    position: absolute;
+    transition: all 0.2s;
+    }
+#botoes button:hover:after{
+    width: 100%;
+}
+main{
+    display: flex;
+    width: 100%;
+    background-color: #F5F7FA;
+    padding: 2.5rem;
+}
+
+.containerProduto{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.containerCima{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 1rem;
+}
+
+.containerImagens{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#produtoImagem{
+    width: 60%;
+    height: 70%;
+    border-radius: 10px;
+}
+
+.containerImagensSecundarias{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.produtoImagemSecundaria{
+    width: 30%;
+    height: 20%;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+.containerInfos{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    padding: 1.2rem;
+}
+
+#nomeProduto{
+    font-size: 2rem;
+    font-weight: 600;
+    color: #2E2E38;
+    margin-bottom: 0.5rem;
+}
+#preco{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2E2E38;
+    margin-bottom: 0.5rem;
+}
+#frete{
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #2E2E38;
+    margin-bottom: 0.5rem;
+}
+#comprarLink{
+    width: 70%;
+    height: 3.5rem;
+    background-color: #4D2F9F;
+    color: white;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 3rem;
+    text-align: center;
+    line-height: 3.5rem;
+}
+
+.containerDescription{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+   
+}
+
+.containerDescription h2{
+    margin-bottom: 1rem;
+}
+footer{
+    width: 100%;
+    height: 11.25rem;
+    background-color: #2E2E38;
+    padding: 1.25rem 2.5rem 1.25rem;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+footer h2{
+    color: #F5F7FA ;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+footer p{
+    color: #F5F7FA ;
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+}
+.sobre{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 2.5rem 0 0;
+}
+
+.contatos{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 2.5rem 0 0;
+}
+
+.formasPagamento{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Responsividade para max-width: 1024px  tablets*/
+@media (max-width: 1024px) {
+    .containerCima {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .containerImagens,
+    .containerInfos {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    #produtoImagem {
+        width: 80%;
+    }
+
+    .produtoImagemSecundaria {
+        width: 60px;
+        height: auto;
+    }
+
+    #comprarLink {
+        width: 80%;
+        margin-top: 0;
+        margin-bottom: 2rem;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        text-align: center;
+    }
+
+    .sobre, .contatos, .formasPagamento {
+        width: 100%;
+        margin: 1rem 0;
+        align-items: center;
+    }
+}
+
+/* Responsividade para max-width: 768px celulares grandes*/
+@media (max-width: 768px) {
+    #produtoImagem {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .produtoImagemSecundaria {
+        width: 50px;
+    }
+
+    #comprarLink {
+        width: 90%;
+    }
+
+    .containerInfos {
+        padding: 0.5rem;
+    }
+}
+
+/* Responsividade para max-width: 480px celulares pequenos*/
+@media (max-width: 480px) {
+    #botoes {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-left: 1.875rem;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    .produtoImagemSecundaria {
+        width: 40px;
+    }
+
+    #comprarLink {
+        font-size: 1rem;
+        height: 3rem;
+        line-height: 3rem;
+    }
+
+    #nomeProduto {
+        font-size: 1.5rem;
+    }
+
+    #preco {
+        font-size: 1.2rem;
+    }
+
+    #frete {
+        font-size: 1rem;
+    }
+
+    .containerDescription {
+        padding: 0 1rem;
+    }
+}
