@@ -91,8 +91,10 @@ main{
 
 #produtoImagem{
     width: 60%;
-    height: 70%;
+    height: 90%;
     border-radius: 10px;
+    object-fit: contain;
+    image-rendering: smooth;
 }
 
 .containerImagensSecundarias{
@@ -145,6 +147,7 @@ main{
     background-color: #4D2F9F;
     color: white;
     border: none;
+    text-decoration: none;
     font-size: 1.2rem;
     font-weight: 600;
     cursor: pointer;
@@ -152,6 +155,12 @@ main{
     margin-top: 3rem;
     text-align: center;
     line-height: 3.5rem;
+}
+#comprarLink:hover{
+    background-color: #593aad;
+}
+#comprarLink:focus{
+    background-color: #6650a3;
 }
 
 .containerDescription{
